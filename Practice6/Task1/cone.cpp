@@ -1,12 +1,12 @@
 #include "cone.h"
 
-void cone::setCoordinate(double X, double Y, double Z)
+void cone::setCoord(double X, double Y, double Z)
 {
 	x = X;
 	y = Y;
 	z = Z;
 }
-void cone::setRadius(double r)
+void cone::setRad(double r)
 {
 	R = r;
 }
@@ -14,13 +14,13 @@ void cone::setHeight(double h)
 {
 	H = h;
 }
-void cone::getCoordinate(double& X, double& Y, double& Z)
+void cone::getCoord(double& X, double& Y, double& Z)
 {
 	X = x;
 	Y = y;
 	Z = z;
 }
-double cone::getRadius()
+double cone::getRad()
 {
 	return R;
 }
@@ -36,15 +36,4 @@ double cone::area()
 double cone::volume()
 {
 	return PI * R * R * H / 3;
-}
-
-ostream& operator<<(ostream& stream, cone obj)
-{
-	stream << "(" << obj.x << "; ";
-	stream << obj.y << "; ";
-	stream << obj.z << ") ";
-	stream << "r = " << obj.R << " ";
-	stream << "h = " << obj.H << "";
-
-	return stream;
 }
