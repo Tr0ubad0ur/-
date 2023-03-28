@@ -46,5 +46,4 @@ class cone
 		double area();
 		double volume();
 
-		friend ostream& operator<<(ostream& stream, cone obj);
 };
